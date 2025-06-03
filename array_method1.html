@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Methods Examples</title>
+</head>
+<body>
+    <p id="ex"></p>
+    <p id = "ex1"></p>
+    <p id="ex2"></p>
+    <script>
+        let languages = ["JavaScript","Java","C"]
+        var priceList = [10,8,2,31,12,1,65]
+
+        let check = languages.includes("Java",2);
+        document.getElementById("ex").innerHTML = check;
+
+        var index1 = priceList.indexOf(31);
+        document.getElementById("ex1").innerHTML = index1;
+
+        var index2 = priceList.indexOf(31,4);
+        document.getElementById("ex2").innerHTML = index2;
+
+
+
+    </script>
+</body>
+</html>

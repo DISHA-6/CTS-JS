@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modify Heading Styles</title>
+</head>
+<body>
+    <h1 id="heading1">This is Heading1</h1>
+    <button onclick="modifyHeading()">Change Style</button>
+
+    <script>
+        function modifyHeading(){
+            const heading = document.getElementById("heading1");
+            heading.style.textAlign = "center";
+            heading.style.fontSize="40px";
+            heading.style.fontFamily="Arial, sans-seriff";
+        }
+    </script>
+</body>
+</html>
+

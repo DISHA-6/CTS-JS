@@ -1,0 +1,39 @@
+<!-- Write a JavaScript program to create Parent object employee 
+(Property : Employee Name , Employee Id , Salary) and Child object 
+Manager (Property : Manager Name , Branch). Inherit all the properties 
+of employee and display all the properties. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise - 4</title>
+</head>
+<body>
+     <h2>Employee and Manager Details</h2>
+    <div id="output"></div>
+
+    <script>
+        function Employee(empName, empId, salary) {
+            this.empName = empName;
+            this.empId = empId;
+            this.salary = salary;
+        }
+        function Manager(empName, empId, salary, managerName, branch) {
+            Employee.call(this, empName, empId, salary);
+            this.managerName = managerName;
+            this.branch = branch;
+        }
+        let manager1 = new Manager("John Doe", "E123", 75000, "Jane Smith", "New York");
+        let output = `
+            <p><strong>Employee Name:</strong> ${manager1.empName}</p>
+            <p><strong>Employee ID:</strong> ${manager1.empId}</p>
+            <p><strong>Salary:</strong> $${manager1.salary}</p>
+            <p><strong>Manager Name:</strong> ${manager1.managerName}</p>
+            <p><strong>Branch:</strong> ${manager1.branch}</p>
+        `;
+
+        document.getElementById("output").innerHTML = output;
+    </script>
+</body>
+</html>

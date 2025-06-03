@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise</title>
+</head>
+<body>
+    <h1>Product List</h1>
+    <div id="output"></div>
+
+  <script>
+    var products = [
+      {
+        productName: "Laptop",
+        quantity: 5,
+        price: 45000
+      },
+      {
+        productName: "Smartphone",
+        quantity: 10,
+        price: 25000
+      },
+      {
+        productName: "Headphones",
+        quantity: 15,
+        price: 1500
+      }
+    ];
+
+    var output = "";
+    for (var i = 0; i < products.length; i++) {
+      output += "<strong>Product " + (i + 1) + "</strong><br>";
+      output += "Product Name: " + products[i].productName + "<br>";
+      output += "Quantity: " + products[i].quantity + "<br>";
+      output += "Price: ₹" + products[i].price + "<br><br>";
+    }
+
+    document.getElementById("output").innerHTML = output;
+  </script>
+
+</body>
+</html>

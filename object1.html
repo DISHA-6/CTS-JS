@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Example</title>
+    <script>
+        var student = {
+            firstName: "John",
+            lastName: "Doe",
+            course: "Java",
+            marks: 50,
+            fullName: function(){
+                return this.firstName+" "+this.lastName
+            }
+        };
+        function showStudentInfo(){
+            const output = `Student: ${student.fullName()}<br>
+            Course: ${student.course}<br> Marks: ${student.marks}`;
+            document.getElementById("studentInfo").innerHTML = output;
+        }
+    </script>
+</head>
+<body>
+    <h2>Student Details</h2>
+    <button onclick="showStudentInfo()">Show Info</button>
+    <p id="studentInfo"></p>
+</body>
+</html>

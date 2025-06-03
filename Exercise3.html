@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise - 3</title>
+</head>
+<body>
+    <h2>Students List</h2>
+  <p>["Anna", "Arun", "Bella", "Anita", "Brian"]</p>
+  <p><strong>Output:</strong> <span id="result"></span></p>
+
+  <script>
+    var students = ["Anna", "Arun", "Bella", "Anita", "Brian"];
+    var count = 0;
+
+    for (var i = 0; i < students.length; i++) {
+      if (students[i].startsWith("A")) {
+        count++;
+      }
+    }
+
+    document.getElementById("result").textContent = count;
+  </script>
+</body>
+</html>

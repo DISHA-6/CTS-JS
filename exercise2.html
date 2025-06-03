@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise - 2</title>
+    <style>
+        div {
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid gray;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 id="heading1">Welcome to JavaScript Exercises</h1>
+
+    <div>This is div 1</div>
+    <div>This is div 2</div>
+
+    <p>This is the first paragraph in the essay.</p>
+    <p>This is the second paragraph in the essay.</p>
+
+    <script>
+        // Task 1
+        let heading = document.getElementById("heading1");
+        heading.style.textAlign = "center";
+        heading.style.fontSize = "32px";
+        heading.style.fontFamily = "Arial, sans-serif";
+
+        // Task 2
+        let allDivs = document.getElementsByTagName("div");
+        for (let i = 0; i < allDivs.length; i++) {
+            allDivs[i].style.backgroundColor = "#e0f7fa";
+        }
+
+        // Task 3
+        let allParagraphs = document.getElementsByTagName("p");
+        for (let i = 0; i < allParagraphs.length; i++) {
+            allParagraphs[i].style.textShadow = "2px 2px 5px gray";
+        }
+    </script>
+
+</body>
+
+</html>

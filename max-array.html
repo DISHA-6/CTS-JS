@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maximum Element in an array</title>
+</head>
+<body>
+    <h1>Maximum Element in an array</h1>
+    <p id="ex"></p>
+    <script>
+        var values = [12,34,6,73,67];
+        var max=values[0]; //12 => 34>12 => max=34
+        for(var i=1;i<values.length;i++){
+            if(values[i]>max){
+                max=values[i];
+            }
+            document.getElementById("ex").innerHTML = `Max: ${max}`;
+        }
+    </script>
+</body>
+</html>

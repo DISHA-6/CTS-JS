@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parent - Child - Prototype</title>
+</head>
+<body>
+    <h2>Parent - Child - Prototype</h2>
+    <p id="ex"></p>
+    <script>
+        //Constructor Function: Employee
+        function Employee(empName, empId, salary){
+            this.empName = empName;
+            this.empId = empId;
+            this.salary = salary;
+        }
+
+        //Constructor Function: Manager
+        function Manager(empName, empId, salary, managerName, branch){
+            Employee.call(this, empName, empId, salary)
+            this.managerName = managerName;
+            this.branch = branch;
+        }
+
+        const mgr = new Manager("John Doe","F102",75000,"Alice","New York")
+
+        document.getElementById("ex").innerHTML = "Employee Name: " + mgr.empName + "<br>"
+        + "Employee Id: " + mgr.empId + "Salary: " + mgr.salary + "<br>"
+        + "Manager Name: " + mgr.managerName + "<br>" + "Branch: " + mgr.branch;
+    </script>
+</body>
+</html>
+
