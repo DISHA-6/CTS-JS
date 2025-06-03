@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Class Work - JavaScript Functions</title>
+</head>
+<body>
+  <h1>Check the Console for Output</h1>
+
+  <script>
+    function square(num) {
+      return num * num;
+    }
+    console.log("Square of 6:", square(6));
+
+    function sumOfCubes(a, b) {
+      return (a ** 3) + (b ** 3);
+    }
+    console.log("Sum of cubes of 2 and 3:", sumOfCubes(2, 3));
+
+    function reverseNumber(n) {
+      return parseInt(n.toString().split('').reverse().join(''));
+    }
+    console.log("Reverse of 12345:", reverseNumber(12345));
+
+    function printDivisibleByZ(z) {
+      console.log("Numbers between 1 and 100 divisible by", z + ":");
+      for (let i = 1; i <= 100; i++) {
+        if (i % z === 0) {
+          console.log(i);
+        }
+      }
+    }
+    printDivisibleByZ(7);
+  </script>
+
+</body>
+</html>
